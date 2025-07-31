@@ -1,9 +1,11 @@
 package ports
 
 import (
+	"context"
+
 	"github.com/MHS-20/Order-Microservice/order/internal/application/core/domain"
 )
 
 type APIPort interface {
-	PlaceOrder(order domain.Order) (domain.Order, error)
+	PlaceOrder(ctx context.Context, order domain.Order) (domain.Order, error)
 }
